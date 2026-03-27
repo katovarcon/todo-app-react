@@ -53,7 +53,7 @@ src/
 
 📸 Preview
 
-se verá aquí: public/screenshot.png
+public/screenshot.png
 
 🎯 Objetivo
 
