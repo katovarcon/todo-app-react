@@ -1,14 +1,20 @@
-function Todo({ todo, toggleTodo }) {
+function Todo({ todo, toggleTodo, deleteTodo }) {
     return (
-      <p
-        onClick={() => toggleTodo(todo.id)}
-        style={{
-          textDecoration: todo.completed ? "line-through" : "none",
-          cursor: "pointer",
-        }}
-      >
-        {todo.text}
-      </p>
+      <div>
+        <p
+          onClick={() => toggleTodo(todo.id)}
+          style={{
+            textDecoration: todo.completed ? "line-through" : "none",
+            cursor: "pointer",
+          }}
+        >
+          {todo.text}
+        </p>
+  
+        <button onClick={() => deleteTodo(todo.id)}>
+          🗑️
+        </button>
+      </div>
     );
   }
   
