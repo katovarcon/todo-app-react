@@ -15,11 +15,11 @@ function Form({ addTodo }) {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Agregar tarea..."
+        placeholder="¿Qué necesitas hacer hoy?"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button type="submit">Agregar</button>
+      <button type="submit">+</button>
     </form>
   );
 }

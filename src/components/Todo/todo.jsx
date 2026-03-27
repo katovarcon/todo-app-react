@@ -1,18 +1,18 @@
 function Todo({ todo, toggleTodo, deleteTodo }) {
     return (
-      <div>
+      <div className="todo fade-in">
         <p
           onClick={() => toggleTodo(todo.id)}
-          style={{
-            textDecoration: todo.completed ? "line-through" : "none",
-            cursor: "pointer",
-          }}
+          className={todo.completed ? "completed" : ""}
         >
           {todo.text}
         </p>
   
-        <button onClick={() => deleteTodo(todo.id)}>
-          🗑️
+        <button
+          className="delete-btn"
+          onClick={() => deleteTodo(todo.id)}
+        >
+          ✖
         </button>
       </div>
     );

@@ -1,18 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./components/Form/Form";
 import TodoList from "./components/TodoList/TodoList";
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const saved = localStorage.getItem("todos");
+    return saved ? JSON.parse(saved) : [];
+  });
+
   const [filter, setFilter] = useState("all");
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = (text) => {
     const newTodo = {
       id: Date.now(),
-      text: text,
+      text,
       completed: false,
     };
-    setTodos([...todos, newTodo]);
+    setTodos([newTodo, ...todos]);
   };
 
   const toggleTodo = (id) => {
@@ -36,8 +44,8 @@ function App() {
   });
 
   return (
-    <div>
-      <h1>Todo App</h1>
+    <div className="app">
+      <h1>✨ TO-DO APP✨</h1>
 
       <Form addTodo={addTodo} />
 
@@ -46,6 +54,10 @@ function App() {
         <option value="completed">Completadas</option>
         <option value="incomplete">Incompletas</option>
       </select>
+
+      <p className="counter">
+        {todos.length} tareas • {todos.filter(t => t.completed).length} completadas
+      </p>
 
       <TodoList
         todos={filteredTodos}

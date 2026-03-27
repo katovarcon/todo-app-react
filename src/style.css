@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    min-height: 100vh;
+  }
+  
+  /* CONTENEDOR */
+  .app {
+    max-width: 520px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* TITLE */
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #111827;
+  }
+  
+  /* FORM */
+  form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.2s;
+  }
+  
+  input:focus {
+    border-color: #6366f1;
+  }
+  
+  /* BUTTON */
+  button {
+    padding: 12px 16px;
+    border: none;
+    background: #6366f1;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    background: #4f46e5;
+    transform: scale(1.05);
+  }
+  
+  /* SELECT */
+  select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  /* TODO ITEM */
+  .todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+  }
+  
+  .todo:hover {
+    transform: translateY(-2px);
+    background: #f3f4f6;
+  }
+  
+  /* TEXTO */
+  .todo p {
+    cursor: pointer;
+    flex: 1;
+  }
+  
+  /* COMPLETADO */
+  .completed {
+    text-decoration: line-through;
+    color: #9ca3af;
+  }
+  
+  /* DELETE */
+  .delete-btn {
+    background: #ef4444;
+  }
+  
+  .delete-btn:hover {
+    background: #dc2626;
+  }
+
+  /* COUNTER */
+.counter {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* EMPTY STATE */
+  .empty {
+    text-align: center;
+    color: #9ca3af;
+    margin-top: 20px;
+    font-style: italic;
+  }
+  
+  /* ANIMACIÓN */
+  .fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
