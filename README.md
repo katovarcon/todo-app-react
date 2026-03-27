@@ -1,16 +1,71 @@
-# React + Vite
+# 🚀 YOUR NEXT TASK?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de gestión de tareas desarrollada con React. Diseñada para mejorar la productividad con una experiencia moderna, animaciones y persistencia de datos en el navegador.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Demo
 
-## React Compiler
+👉 [Ver app en vivo](https://your-next-task.netlify.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Crear nuevas tareas
+- Marcar tareas como completadas
+- Eliminar tareas
+- Filtrar por:
+  - Todas
+  - Completadas
+  - Incompletas
+- Persistencia con localStorage
+- Animaciones suaves al agregar tareas
+- Contador de progreso
+
+---
+
+## 🛠️ Tecnologías
+
+- React (useState, useEffect)
+- Vite
+- CSS moderno (flexbox + animaciones)
+
+---
+
+## 📦 Instalación
+
+```bash
+git clone https://github.com/katovarcon/todo-app-react.git
+cd todo-app-react
+npm install
+npm run dev
+
+📁 Estructura del proyecto
+src/
+ ├── components/
+ │    ├── Form/
+ │    ├── Todo/
+ │    └── TodoList/
+ ├── App.jsx
+ ├── main.jsx
+ └── styles.css
+
+📸 Preview
+
+se verá aquí: public/screenshot.png
+
+🎯 Objetivo
+
+Este proyecto fue desarrollado para consolidar fundamentos de React, manejo de estado, arquitectura basada en componentes y buenas prácticas de desarrollo frontend.
+
+💡 Autor
+
+Karla Tovar
+
+
+## 🌟 Mejoras futuras
+- Dark mode 🌙
+- Animaciones más avanzadas
+- Drag & drop para reordenar tareas
+- Integración con backend

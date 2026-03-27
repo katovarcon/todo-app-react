@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>✨ TO-DO APP✨</h1>
+      <h1>🚀 YOUR NEXT TASK 🚀 </h1>
 
       <Form addTodo={addTodo} />
 
