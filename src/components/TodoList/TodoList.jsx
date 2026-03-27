@@ -1,10 +1,10 @@
-import Todo from ".../Todo/Todo";
+import Todo from "../Todo/todo";
 
-function TodoList({ todos }) {
+function TodoList({ todos, toggleTodo }) {
   return (
     <div>
       {todos.map((todo) => (
-        <Todo key={todo.id} todo={todo} />
+        <Todo key={todo.id} todo={todo} toggleTodo={toggleTodo} />
       ))}
     </div>
   );
